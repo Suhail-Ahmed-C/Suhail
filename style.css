@@ -1,0 +1,1222 @@
+ body {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Header */
+    .header {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 12px 0;
+    }
+
+    .sitename {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00fff5;
+      transition: 0.3s;
+    }
+
+    .sitename:hover {
+      color: #00fff5;
+    }
+
+    /* Desktop Nav Links */
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-weight: 500;
+      position: relative;
+      padding: 8px 0;
+    }
+
+    /* Hover underline */
+    .navbar-nav .nav-link::after {
+      content: "";
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #00fff5;
+      transition: 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Get Started Button - Ensuring minimum touch target */
+    .btn-getstarted {
+      background: #00fff5;
+      padding: 12px 25px; /* Increased padding for better touch target */
+      border-radius: 50px;
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block; /* Ensures proper dimensions */
+      min-height: 44px; /* Minimum touch target height */
+      min-width: 44px; /* Minimum touch target width */
+    }
+
+    .btn-getstarted:hover {
+      background: #00e8ff;
+    }
+
+    /* ============================
+       HERO MODERN UI STYLING
+    ============================= */
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    /* Background Image */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    /* Gradient Overlay */
+    .hero-bg .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.65) 100%);
+    }
+
+    /* Content Centering */
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      color: #fff;
+      padding: 0 15px; /* Added padding for mobile */
+    }
+
+    /* Title */
+    .hero-title {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .hero-title span {
+      color: #00fff5;
+      text-shadow: 0 0 10px rgba(0,255,245,0.6);
+    }
+
+    /* Subtitle / Typed Effect */
+    .hero-subtitle {
+      font-size: 20px;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    /* Social Icons - Ensuring minimum touch targets */
+    .social-links a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px; /* Minimum touch target */
+      height: 44px; /* Minimum touch target */
+      margin: 0 8px;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      transition: 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #00fff5;
+      color: #000;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 12px rgba(0,255,245,0.8);
+    }
+
+    /* Fade Up Animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 34px;
+      }
+      .hero-subtitle {
+        font-size: 18px;
+      }
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .hero-content {
+        padding: 0 20px; /* Additional padding for very small screens */
+      }
+      
+      .hero-title {
+        font-size: 28px;
+      }
+      
+      .hero-subtitle {
+        font-size: 16px;
+      }
+      
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+      }
+    }
+
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --theme-color: #00fff5;
+      --text-light: #bfc7d5;
+    }
+
+    /* Main Section */
+    #about {
+      padding: 20px 0;
+      color: #fff;
+      background: #0d0d0d;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+
+    .section-title span.subtitle {
+      font-size: 15px;
+      text-transform: uppercase;
+      color: var(--theme-color);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: 10px auto;
+      color: var(--text-light);
+    }
+
+    /* Profile Card */
+    .profile-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      padding: 35px;
+      border-radius: 22px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0px 0px 40px rgba(0, 255, 255, 0.08);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .profile-avatar {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      margin: auto;
+    }
+
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .status-indicator {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: #00ff47;
+      border-radius: 50%;
+      bottom: 8px;
+      right: 8px;
+      border: 2px solid #0d0d0d;
+    }
+
+    .profile-header h3 {
+      margin-top: 20px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .profile-header .role {
+      color: var(--theme-color);
+      font-size: 15px;
+    }
+
+    .rating {
+      margin-top: 10px;
+      color: var(--theme-color);
+      font-size: 18px;
+    }
+
+    .profile-stats {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 0;
+    }
+
+    .profile-stats .stat-item h4 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    /* Profile Actions - Ensuring minimum touch targets */
+    .profile-actions a {
+      display: block;
+      padding: 12px; /* Increased padding for better touch target */
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+      text-decoration: none;
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .btn-primary {
+      background: var(--theme-color);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.85;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Social Connect - Ensuring minimum touch targets */
+    .social-connect a {
+      margin: 0 8px;
+      font-size: 20px;
+      color: var(--text-light);
+      transition: 0.3s;
+      display: inline-block;
+      width: 44px; /* Minimum touch target */
+      height: 44px; /* Minimum touch target */
+      line-height: 44px; /* Center icon vertically */
+      text-align: center; /* Center icon horizontally */
+    }
+
+    .social-connect a:hover {
+      color: var(--theme-color);
+    }
+
+    /* Right Side Content */
+    .content-wrapper {
+      animation: fadeLeft 1s ease forwards;
+    }
+
+    .section-tag {
+      color: var(--theme-color);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .content-wrapper h2 {
+      font-size: 34px;
+      margin: 10px 0;
+      font-weight: 700;
+    }
+
+    .content-wrapper p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    /* Details Grid */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin: 30px 0;
+    }
+
+    .detail-item {
+      background: var(--glass-bg);
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.3s;
+    }
+
+    .detail-item i {
+      font-size: 28px;
+      color: var(--theme-color);
+    }
+
+    .detail-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--theme-color);
+    }
+
+    /* Skills Section */
+    .skills-showcase h3 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .skill-item {
+      margin-bottom: 18px;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .progress-bar {
+      background: var(--theme-color);
+      width: 0%;
+      animation: growFill 2.4s ease forwards;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeLeft {
+      0% { opacity: 0; transform: translateX(50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes growFill {
+      from { width: 0; }
+      to { width: var(--target-width); }
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .section-title h2 {
+        font-size: 32px;
+      }
+      
+      .profile-card {
+        padding: 25px 15px;
+      }
+      
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .content-wrapper h2 {
+        font-size: 28px;
+      }
+    }
+
+    /* Resume Section */
+    #resume {
+      padding: 20px 0;
+      color: #fff;
+      background: #0d0d0d;
+    }
+
+    /* EXPERIENCE CARDS */
+    .exp-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 25px;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(12px);
+    }
+
+    .exp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,255,255,0.1);
+    }
+
+    .exp-card .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .exp-card .company-logo {
+      font-size: 28px;
+      color: var(--theme-color);
+    }
+
+    .exp-card .period-badge {
+      background: var(--theme-color);
+      color: #000;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .exp-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .exp-card .company-name {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    .exp-card .duration {
+      font-size: 13px;
+      color: var(--theme-color);
+    }
+
+    .exp-card .description {
+      margin: 10px 0;
+      color: var(--text-light);
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills-tags .skill-tag {
+      background: rgba(0,255,255,0.15);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #00fff5;
+    }
+
+    /* EDUCATION TIMELINE */
+    .timeline-track {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline-track::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12px;
+      width: 4px;
+      height: 100%;
+      background: var(--theme-color);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 25px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -1px;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--theme-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .timeline-content {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 15px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s;
+    }
+
+    .timeline-item:hover .timeline-content {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,255,255,0.08);
+    }
+
+    .timeline-content h4 {
+      margin-top: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .timeline-content .education-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--theme-color);
+      margin-bottom: 5px;
+    }
+
+    .timeline-content p {
+      color: var(--text-light);
+    }
+
+    .certifications-list .cert-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      background: rgba(0,255,255,0.1);
+      padding: 6px 12px;
+      border-radius: 12px;
+      margin-top: 5px;
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .exp-card {
+        padding: 20px 15px;
+      }
+      
+      .timeline-content {
+        padding: 15px;
+      }
+      
+      .timeline-content h4 {
+        font-size: 16px;
+      }
+    }
+
+    /* Services Section */
+    #services {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 50px 0;
+    }
+
+    #services .section-title span.subtitle {
+      color: #00fff5;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #services .section-title h2 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    #services .section-title p {
+      color: #bfc7d5;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .service-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,255,255,0.1);
+    }
+
+    .service-item .icon-wrapper {
+      font-size: 40px;
+      color: #00fff5;
+      margin-bottom: 15px;
+    }
+
+    .service-item h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .service-item p {
+      font-size: 14px;
+      color: #bfc7d5;
+      margin-bottom: 15px;
+    }
+
+    /* Service Read More Link - Ensuring minimum touch target */
+    .service-item .read-more {
+      color: #00fff5;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+      padding: 8px 0; /* Added padding for better touch target */
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .service-item .read-more:hover {
+      transform: translateX(5px);
+    }
+
+    .service-item.featured {
+      border: 2px solid #00fff5;
+    }
+
+    .service-item .featured-tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #00fff5;
+      color: #000;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 50px;
+    }
+
+    /* CTA BOX */
+    .cta-box {
+      padding: 25px 30px;
+      border-radius: 1rem; /* Added border-radius */
+    }
+
+    .cta-box h3 {
+      font-weight: 600;
+      margin: 0 0 5px 0;
+    }
+
+    .cta-box p {
+      color: #bfc7d5;
+      margin-bottom: 0;
+    }
+
+    /* CTA Button - Ensuring minimum touch target */
+    .cta-btn {
+      background: #00fff5;
+      color: #000;
+      padding: 12px 25px; /* Increased padding for better touch target */
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .cta-btn:hover {
+      background: #00e8ff;
+      transform: translateY(-3px);
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .service-item {
+        padding: 20px 15px;
+      }
+      
+      .cta-box {
+        padding: 20px 15px;
+      }
+      
+      .cta-box h3 {
+        font-size: 20px;
+      }
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 100px 0;
+    }
+
+    #portfolio .section-title span.subtitle {
+      color: #00fff5;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #portfolio .section-title h2 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    /* Portfolio Filters - Ensuring minimum touch targets */
+    #portfolio .portfolio-filters li {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px; /* Increased padding for better touch target */
+      background: rgba(255,255,255,0.08);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    #portfolio .portfolio-filters .filter-active,
+    #portfolio .portfolio-filters li:hover {
+      background: #00fff5;
+      color: #000;
+    }
+
+    .portfolio-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,255,255,0.1);
+    }
+
+    .portfolio-image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-image-container img {
+      width: 100%;
+      transition: transform 0.5s;
+    }
+
+    .portfolio-image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      opacity: 0;
+      transition: 0.3s;
+      color: #fff;
+      text-align: center;
+    }
+
+    .portfolio-image-container:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-overlay h5 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .portfolio-overlay span {
+      font-size: 14px;
+      color: #00fff5;
+    }
+
+    /* Portfolio Actions - Ensuring minimum touch targets */
+    .portfolio-actions a {
+      display: inline-block;
+      margin: 5px 5px 0 5px;
+      color: #00fff5;
+      font-size: 18px;
+      transition: 0.3s;
+      width: 44px; /* Minimum touch target */
+      height: 44px; /* Minimum touch target */
+      line-height: 44px; /* Center icon vertically */
+      text-align: center; /* Center icon horizontally */
+    }
+
+    .portfolio-actions a:hover {
+      transform: scale(1.2);
+    }
+
+    .portfolio-meta {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      font-size: 14px;
+      color: #bfc7d5;
+    }
+
+    .portfolio-meta .tag {
+      background: rgba(0,255,245,0.1);
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-right: 5px;
+    }
+
+    .portfolio-bottom {
+      background: rgba(0,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      padding: 25px 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portfolio-bottom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,255,255,0.1);
+    }
+
+    /* Accent Button - Ensuring minimum touch target */
+    .btn-accent {
+      background: #00fff5;
+      color: #000;
+      padding: 12px 25px; /* Increased padding for better touch target */
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .btn-accent:hover {
+      background:#00fff5;
+      transform: translateY(-3px);
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      #portfolio .portfolio-filters li {
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+      
+      .portfolio-bottom {
+        padding: 20px 15px;
+      }
+    }
+
+    /* Contact Section Modern UI */
+    .contact-subtitle {
+      font-size: 15px;
+      color: #00fff5;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-title {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .contact-text {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    .contact-card {
+      background:#0d0d0d;
+      padding: 5px;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(248, 9, 9, 0.3);
+      transition: .4s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Dark background for section */
+    .contact-section {
+      background: #111;
+    }
+
+    /* Info Box Styling - Ensuring minimum touch targets */
+    .info-box {
+      background: #1a1a1a;
+      padding: 15px; /* Increased padding for better touch target */
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #222;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      transition: .3s ease;
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+      border-color: #00fff5;
+    }
+
+    /* Icon Circle */
+    .info-box .icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background:  rgba(58, 169, 177, 0.25);
+      color:#00fff5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      transition: .3s;
+    }
+
+    .info-box:hover .icon {
+      background: rgba(58, 169, 177, 0.25);
+      transform: scale(1.1);
+    }
+
+    .info-box h4 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .info-box p {
+      color: #bbb;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* Form Box */
+    .form-wrapper {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 14px;
+      border: 1px solid #222;
+    }
+
+    /* Dark Inputs - Ensuring proper sizing for mobile */
+    .input-dark {
+      background: #111;
+      color: #eee;
+      border: 1px solid #333;
+      padding: 14px; /* Increased padding for better touch target */
+      border-radius: 8px;
+      transition: .3s;
+      font-size: 16px; /* Prevents zoom on iOS */
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .input-dark::placeholder {
+      color: #666;
+    }
+
+    .input-dark:focus {
+      border-color: #00fff5;
+      box-shadow: 0 0 8px rgba(255, 73, 73, 0.3);
+      color: #fff;
+    }
+
+    /* Submit Button - Ensuring minimum touch target */
+    .btn-submit {
+      background:#2fe4de;
+      color: #fff;
+      font-weight: 600;
+      padding: 14px 40px; /* Increased padding for better touch target */
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      transition: .3s;
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .btn-submit:hover {
+      background: #4af0ea;
+      transform: translateY(-3px);
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .contact-title {
+        font-size: 32px;
+      }
+      
+      .form-wrapper {
+        padding: 25px 15px;
+      }
+      
+      .info-box {
+        padding: 12px;
+      }
+      
+      .info-box .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
+    }
+
+    /* Footer Background */
+    .modern-footer {
+      background: #0f0f0f;
+      border-top: 1px solid #222;
+    }
+
+    /* Titles */
+    .footer-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-subtitle {
+      font-weight: 600;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    /* Paragraph Text */
+    .footer-text {
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    /* Links - Ensuring minimum touch targets */
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      transition: 0.3s;
+      display: block;
+      padding: 5px 0; /* Added padding for better touch target */
+      min-height: 44px; /* Minimum touch target height */
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      padding-left: 5px;
+    }
+
+    /* Social Icons - Ensuring minimum touch targets */
+    .social-icon {
+      width: 44px; /* Minimum touch target */
+      height: 44px; /* Minimum touch target */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1b1b1b;
+      border-radius: 50%;
+      font-size: 18px;
+      color: #00fff5;
+      transition: 0.3s ease-in-out;
+    }
+
+    .social-icon:hover {
+      background: #00fff5;
+      color: #000;
+      transform: translateY(-6px) rotate(10deg);
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+      border-top: 1px solid #222;
+      color: #000;
+      background: #eeeeee;
+    }
+    
+    small {
+      color: #00fff5;
+      font-weight: 600;
+    }
+
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .footer-title {
+        font-size: 1.5rem;
+      }
+      
+      .footer-subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    /* Hamburger Menu - Improved for mobile */
+    .navbar-toggler {
+      border: none;
+      padding: 5px;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    
+    .navbar-toggler-icon {
+      width: 30px;
+      height: 30px;
+    }
+    
+    /* Extra small devices (phones, 576px and down) */
+    @media (max-width: 576px) {
+      .navbar-nav {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+      }
+      
+      .navbar-nav .nav-link {
+        padding: 12px 0; /* Increased padding for better touch target */
+        font-size: 18px;
+      }
+    }
